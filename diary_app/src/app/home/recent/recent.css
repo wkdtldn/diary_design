@@ -1,0 +1,41 @@
+.ContentWrapper {
+  background-color: rgb(251, 242, 235);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.filterWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.calendarIcon {
+  font-size: 18px;
+  margin-right: 3px;
+}
+
+.filterWrapper .dateWrapper,
+.filterWrapper .showMethodfilter,
+.filterWrapper .orderfilter {
+  color: #e0684a;
+  font-size: 15px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align-last: center;
+}
+
+.datefilter {
+  appearance: none;
+}
+
+.datefilter:focus,
+.orderfilter:focus,
+.showMethodfilter:focus {
+  outline: none;
+}

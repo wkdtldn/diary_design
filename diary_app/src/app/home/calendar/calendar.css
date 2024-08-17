@@ -1,0 +1,170 @@
+.CalendarPageWrapper {
+  justify-content: flex-start;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.CalendarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  .react-calendar {
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 4% 4% 8% 4%;
+  }
+
+  /* 네비게이션바 */
+  .react-calendar__navigation {
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+
+  .react-calendar__navigation__label {
+    flex-grow: 0 !important;
+  }
+  .react-calendar__navigation button {
+    border-radius: 0.6rem;
+  }
+  .react-calendar__navigation button:hover,
+  .react-calendar__navigation button:active,
+  .react-calendar__navigation button:focus,
+  .react-calendar__navigation button:disabled,
+  .react-calendar__navigation button:disabled:hover,
+  .react-calendar__navigation button:disabled:focus {
+    background-color: white;
+  }
+
+  /* 요일 밑줄 제거 */
+  .react-calendar__month-view__weekdays abbr {
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  /* 일요일 글씨 빨간색 */
+  .react-calendar__month-view__weekdays__weekday--weekend abbr[title="일요일"] {
+    color: rgb(252, 85, 29);
+  }
+  .react-calendar__month-view__days__day--weekend {
+    color: black;
+  }
+
+  /* 현재 날짜 글씨 색 변경 */
+  .react-calendar__tile--now {
+    background: none;
+    abbr {
+      color: rgb(227, 107, 31);
+    }
+  }
+
+  /* 날짜 스타일링 */
+  .react-calendar__tile {
+    padding: 5px 0px 17px;
+    position: relative;
+    border-radius: 0.25rem;
+  }
+  .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:focus,
+  .react-calendar__tile--active {
+    background-color: rgb(255, 226, 191);
+    color: black;
+  }
+}
+
+.Dot {
+  background-color: rgb(162, 83, 46);
+  border-radius: 50%;
+  width: 0.3rem;
+  height: 0.3rem;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Today {
+  font-size: x-small;
+  color: rgb(169, 70, 24);
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.CalendarPageWrapper .FilterWrapper {
+  width: 100%;
+  height: 45px;
+  background-color: #c2cded;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.CalendarPageWrapper .Filter {
+  background-color: white;
+  outline: none;
+  border-radius: 5px;
+  height: 30px;
+  box-shadow: 2px 2px 5px #a0a1a3;
+}
+
+.CalendarPageWrapper .ContentWrapper {
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.CalendarPageWrapper .contentbox {
+  transition-duration: 0.2s;
+  margin: 10px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  height: 70px;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 1px 1px 3px #d4d5d9, 1px 1px 3px #98999c;
+  position: relative;
+  &:hover {
+    box-shadow: 2px 2px 5px #d9dbe5, 3px 3px 8px #828487;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.CalendarPageWrapper .contentTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 4px;
+}
+
+.CalendarPageWrapper .contentTime {
+  font-size: 10px;
+  color: #88898a;
+  position: absolute;
+  bottom: 5px;
+}
+
+.CalendarPageWrapper .contentUser {
+  position: absolute;
+  color: #6c7180;
+  top: 5px;
+  right: 7px;
+  font-size: 12px;
+}
